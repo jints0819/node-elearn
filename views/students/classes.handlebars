@@ -1,0 +1,25 @@
+<h2>{{student.first_name}}'s Classes</h2>
+<table cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th>Class ID</th>
+            <th>Class Name</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each student.classes}}
+        <tr>
+            <td>{{_id}}</td>
+            <td>{{class_title}}</td>
+            <td><a href="/classes/{{_id}}/lessons" class="button">View Lessons</a></td>
+            <td><a href="/students/classes/{{_id}}/comment" class="button">Comment</a></td>
+            <td>
+                <a href="/students/classes/delete/{{_id}}/" data-id="{{_id}}"
+                   class="button alert delete-class-s">Delete Class</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+<script src="//cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+
+
+<h2>Add comment</h2>
+<form id="regForm" method="post" action="/students/classes/{{class_id}}/comment">
+    <div>
+        <label>Name </label>
+        <input type="text" name="usename" value={{username}}>
+    </div><br />
+    <div>
+        <label>Title: </label>
+        <input type="text" name="comment_title">
+    </div><br />
+    <div>
+        <label>Comment: </label>
+        <textarea name="comment_body"></textarea>
+        <script type="text/javascript">           
+            CKEDITOR.replace('lesson_body');
+        </script>
+
+    </div><br />
+    <div>
+        <input type="submit" value="Add Comment">
+    </div>
+</form>

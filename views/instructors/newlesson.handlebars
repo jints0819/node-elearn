@@ -1,0 +1,29 @@
+<script src="//cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+
+
+<h2>Add Lesson</h2>
+<form id="regForm" method="post" action="/instructors/classes/{{class_id}}/lessons/new">
+    <div>
+        <label>Lesson Number: </label>
+        <input type="text" name="lesson_number">
+    </div><br />
+    <div>
+        <label>Lesson Title: </label>
+        <input type="text" name="lesson_title">
+    </div><br />
+    <div>
+        <label>Lesson Body: </label>
+        <textarea name="lesson_body"></textarea>
+        <script type="text/javascript">
+            // Enable local "abbr" plugin from /myplugins/abbr/ folder.
+            //CKEDITOR.plugins.addExternal('abbr', '/myplugins/abbr/', 'plugin.js');
+
+            // extraPlugins needs to be set too.
+            CKEDITOR.replace('lesson_body');
+        </script>
+
+    </div><br />
+    <div>
+        <input type="submit" value="Add Lesson">
+    </div>
+</form>

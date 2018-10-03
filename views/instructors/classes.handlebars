@@ -1,0 +1,30 @@
+<h2>{{instructor.first_name}}'s Classes</h2>
+
+<table cellspacing="0" cellpadding="0">
+    <a href="/instructors/classes/new">Add Class</a>
+    <thead>
+        <tr>
+            <th>Class ID</th>
+            <th>Class Name</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each instructor.classes}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{title}}</td>
+            <td><a href="/instructors/classes/{{id}}/lessons">View Lessons</a></td>
+            <td><a href="/instructors/classes/{{id}}/lessons/new">Add Lesson</a></td>
+            <td>
+                <a href="/instructors/classes/delete/{{id}}/" data-id="{{id}}"
+                   class="button alert delete-class">Delete Class</a>
+            </td>
+        </tr>
+
+
+
+        {{/each}}
+    </tbody>
+</table>

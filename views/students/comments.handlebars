@@ -1,0 +1,25 @@
+<h2>Comments</h2>
+<table cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Comment</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each comments}}
+        <tr>
+            <td>{{_id}}</td>
+            <td>{{title}}</td>
+            <td>{{body}}</td>
+            <td>
+                <a href="/students/classes/comment/delete/{{_id}}/" data-id="{{_id}}"
+                   class="button alert delete-comment-s">Delete Comment</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

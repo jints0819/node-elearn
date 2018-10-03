@@ -1,0 +1,42 @@
+<h2>{{classes.title}}</h2>
+<p>
+    <strong>Instructor: </strong> {{classes.instructor.first_name}}
+</p>
+<p>
+    {{{classes.description}}}
+</p>
+<ul class="alt">
+    {{#each classes.lessons}}
+    <li>{{lesson_title}}</li>
+    {{/each}}
+</ul>
+
+
+<p> Comments </p>
+
+<p>
+    {{#each classes.comments}}
+    <h6> {{user.username}}</h6>
+
+    {{{body}}}
+
+    {{/each}}
+
+</p>
+
+{{#equals user.type}}
+<form id="classRegForm" method="post" action="/{{type}}s/classes/register">
+    <input type="hidden" name="student_id" value="{{user._id}}">
+    <input type="hidden" name="class_id" value="{{classes._id}}">
+    <input type="hidden" name="class_title" value="{{classes.title}}">
+    <input type="submit" class="button" value="Register For This Class">
+</form>
+{{else}}
+{{#equalt user.type}}
+<p> </p>
+
+{{else}}
+<p>You must be logged in to register for this class</p>
+
+{{/equalt}}
+{{/equals}}

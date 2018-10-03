@@ -1,0 +1,40 @@
+<script src="//cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+<h2>Add Class</h2>
+{{#if errors}}
+{{#each errors}}
+<div class="notice error">
+    <i class="icon-remove-sign icon-large"></i> {{msg}}
+    <a href="#close" class="icon-remove"></a>
+</div>
+{{/each}}
+{{/if}}
+
+<form id="regForm" method="post" action="/instructors/classes/new" enctype="multipart/form-data">
+    <div>
+        <label>Title: </label>
+        <input type="text" name="title">
+    </div><br />
+    <div>
+        <label>Category: </label>
+        <input type="text" name="category">
+    </div><br />
+    <div>
+        <label>Instructor: </label>
+        <input type="text" name="instructor" value="{{instructor.first_name}}">
+    </div><br />
+    <div>
+        <label>Description: </label>
+        <textarea name="description_body"></textarea>
+        <script type="text/javascript">
+            CKEDITOR.replace('description_body');
+        </script>
+
+    </div><br />
+    <div>
+        <label>Image: </label>
+        <input type="file" name="image">
+    </div>
+    <div>
+        <input type="submit" value="Add Class">
+    </div>
+</form>

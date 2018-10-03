@@ -1,0 +1,26 @@
+<script src="//cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+
+
+<h2>Update Lesson</h2>
+<form id="regForm" method="post" action="/instructors/classes/{{class._id}}/lessons/{{lesson._id}}/update">
+    <div>
+        <label>Lesson Number: </label>
+        <input type="text" name="lesson_number" value="{{lesson.lesson_number}}">
+    </div><br />
+    <div>
+        <label>Lesson Title: </label>
+        <input type="text" name="lesson_title" value="{{lesson.lesson_title}}">
+    </div><br />
+    <div>
+        <label>Lesson Body: </label>
+        <textarea name="lesson_body">{{lesson.lesson_body}}</textarea>
+    
+      <script type="text/javascript">  
+            CKEDITOR.replace('lesson_body');
+        </script>
+    
+    </div><br />
+    <div>
+        <input type="submit" value="Update Lesson">
+    </div>
+</form>

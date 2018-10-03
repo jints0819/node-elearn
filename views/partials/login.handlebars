@@ -1,0 +1,27 @@
+{{#if user}}
+<h5>Welcome Back {{user.username}}</h5>
+<ul class="alt">
+    <li><a href="/{{type}}s/classes">My Classes</a></li>
+    {{#equals user.type}}
+    <li><a href="/{{type}}s/comments">My Comment</a></li>
+    {{/equals}}
+    {{#equalt user.type}}
+    <!-- <li><a href="/{{type}}s/comments">Student's Comment</a></li>  -->
+    {{/equalt}}
+
+    <li><a href="/users/logout">Logout</a></li>
+</ul>
+{{else}}
+<h4>Student & Instructor Login</h4>
+
+<form method="post" action="/users/login">
+    <label> Username: </label>
+    <input type="text" name="username">
+    <label> Password: </label>
+    <input type="password" name="password">
+    <input type="submit" class="button" value="Login">
+</form>
+
+
+
+{{/if}}
