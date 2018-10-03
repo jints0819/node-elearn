@@ -11,9 +11,6 @@
 
 This is an e-learn website project, including sign in/sign out and CRUD functions for two user types: instructor and student.
 
-This is an advanced e-learn website project, including sign in/sign out and CRUD functions for two user types: instructor and student.
-
-
 It will handle MongoDB complex nested objects and reference documents in other collection.
 
 **Detailed Function**
