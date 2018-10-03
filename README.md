@@ -1,31 +1,23 @@
 # Welcome to Node-Elearn Project #
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> fc427501021855409fc7617a2bed3c2983165bf0
 **Node-elearn** is a full-featured elearn website using *Node.js, express.js, handlebars, HTML, CSS, javascript,
 	mongoDB,Mongoose.*
 
 
 ## Main Feature ##
 
-<<<<<<< HEAD
+
 This is an e-learn website project, including sign in/sign out and CRUD functions for two user types: instructor and student.
-=======
+
 This is an advanced e-learn website project, including sign in/sign out and CRUD functions for two user types: instructor and student.
->>>>>>> fc427501021855409fc7617a2bed3c2983165bf0
+
 
 It will handle MongoDB complex nested objects and reference documents in other collection.
 
 **Detailed Function**
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> fc427501021855409fc7617a2bed3c2983165bf0
 Instructor:
 
 -  register an account
@@ -37,14 +29,10 @@ Student:
 
 -  register an account
 -  sign in/sign out
-<<<<<<< HEAD
 -  register class/remove class
 -  new/update/delete comment in the class
-=======
 -  register class
 -  new/delete comment in the class
->>>>>>> fc427501021855409fc7617a2bed3c2983165bf0
-
 
 ## Web Sitemap ##
 
