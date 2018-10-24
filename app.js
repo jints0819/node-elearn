@@ -27,8 +27,6 @@ mongoose.connect(mongodbURI).then((db) => {
     });
 
 
-var db = mongoose.connection;
-
 var index = require('./routes/index');
 var users = require('./routes/users');
 var classes = require('./routes/classes');
