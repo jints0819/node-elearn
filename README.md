@@ -35,9 +35,6 @@ Student:
 
 ![image](https://github.com/jints0819/node-elearn/blob/master/Sitemap.png)
 
-## DEMO Link ##
-https://node-elearn.herokuapp.com/
-
 
 ## Instructions ##
 1. Download all files
